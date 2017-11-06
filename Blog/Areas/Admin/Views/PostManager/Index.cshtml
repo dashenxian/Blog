@@ -1,0 +1,14 @@
+﻿@model Blog.Areas.Admin.Models.PostMaintainListViewModel
+@{
+    ViewBag.Title = "文章管理列表";
+}
+
+<h2>文章列表</h2>
+@Html.ActionLink("添加新文章", "Insert")
+<ul>
+    @foreach (var post in Model.Posts)
+    {
+        <li>@Html.ActionLink((string)post.Title, "Update", new { id = post.ID })</li>
+    }
+</ul>
+<p>当前显示第 @Model.PageCount 页，共有 @Model.Pages 页（记录总数：@Model.Count）</p>
