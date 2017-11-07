@@ -9,7 +9,7 @@ namespace BlogRepository.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "Blog";
         }
 
